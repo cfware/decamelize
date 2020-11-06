@@ -11,13 +11,12 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-export default function decamelize(text) {
-	// Adopted from github.com/sindresorhus/decamelize
-	//  - Uses abbreviated unicode character classes
-	//  - Drop separator argument
-	//  - ES module format
-	return text
-		.replace(/([\p{Ll}\d])(\p{Lu})/gu, '$1-$2')
-		.replace(/(\p{Lu}+)(\p{Lu}\p{Ll}+)/gu, '$1-$2')
-		.toLowerCase();
-}
+// Adopted from github.com/sindresorhus/decamelize
+//  - Uses abbreviated unicode character classes
+//  - Drop separator argument
+//  - ES module format
+export default text => text
+	.replace(/([\p{Ll}\d])(\p{Lu})/gu, '$1-$2')
+	.replace(/(\p{Lu}+)(\p{Lu}\p{Ll}+)/gu, '$1-$2')
+	.toLowerCase();
+
