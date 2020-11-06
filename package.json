@@ -1,6 +1,6 @@
 {
 	"name": "@cfware/decamelize",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "ES Module fork of decamelize",
 	"type": "module",
 	"main": "decamelize.js",
