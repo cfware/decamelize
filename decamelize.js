@@ -1,4 +1,5 @@
 /* eslint "prefer-named-capture-group": 0 */
+/* eslint "unicorn/prefer-string-replace-all": 0 */
 /*
 MIT License
 
@@ -16,7 +17,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 //  - Drop separator argument
 //  - ES module format
 export default text => text
-	.replace(/([\p{Ll}\d])(\p{Lu})/gu, '$1-$2')
-	.replace(/(\p{Lu}+)(\p{Lu}\p{Ll}+)/gu, '$1-$2')
-	.toLowerCase();
-
+    .replace(/([\p{Ll}\d])(\p{Lu})/gu, '$1-$2')
+    .replace(/(\p{Lu}+)(\p{Lu}\p{Ll}+)/gu, '$1-$2')
+    .toLowerCase();
